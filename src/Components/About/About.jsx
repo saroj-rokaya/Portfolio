@@ -11,13 +11,14 @@ const About = () => {
       {
         duration: 1000,
         easing: "ease-in-out",
+        once: false,
       },
       []
     );
   });
   return (
     <>
-      <section className="overflow-hidden py-5 bg-gray-200">
+      <section className="overflow-hidden py-5 bg-[#669bbc]">
         <div className="w-[90%] bg-[#011222] rounded-xl text-white p-5 sm:p-10 mx-auto flex flex-wrap">
           <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
             <h1 className="text-3xl font-medium mb-4" data-aos="fade-right">

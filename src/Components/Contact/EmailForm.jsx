@@ -1,8 +1,17 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Successbar from "./Successbar.jsx";
 
 const EmailForm = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: false,
+    });
+  });
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -12,22 +21,22 @@ const EmailForm = () => {
       })
       .then(
         () => {
-        //   console.log("SUCCESS!");
+          //   console.log("SUCCESS!");
           window.confirm("Message Sent!");
         },
         (error) => {
-        //   console.log("FAILED...", error.text);
-          window.alert("FAILED!....",error.text);
-          
+          //   console.log("FAILED...", error.text);
+          window.alert("FAILED!....", error.text);
         }
       );
-      e.target.reset();
+    e.target.reset();
   };
   return (
     <>
       <form
         ref={form}
         onSubmit={sendEmail}
+        data-aos="zoom-in-left"
         className="lg:w-2/5 px-5 rounded-lg md:w-1/2 bg-white flex flex-col md:ml-auto w-full py-10 mt-8 md:mt-0"
       >
         <h2 className="text-lg mb-1 font-bold">Let's Connect</h2>
@@ -67,7 +76,7 @@ const EmailForm = () => {
         <button
           type="submit"
           value="Send"
-        //   onClick={}
+          //   onClick={}
           className="border-0 py-2 inline-flex h-12 animate-shimmer items-center justify-center rounded-md  bg-[linear-gradient(110deg,#011222,45%,#669bbc,55%,#011222)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors hover:bg-[linear-gradient(110deg,#669bbc,45%,#011222,55%,#669bbc)]"
         >
           Send Message

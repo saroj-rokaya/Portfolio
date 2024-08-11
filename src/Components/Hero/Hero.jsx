@@ -6,14 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaCode } from "react-icons/fa6";
 
-import {
-  FaLinkedin,
-  FaFacebook,
-  FaInstagram,
-  FaWhatsappSquare,
-  FaTelegram,
-  FaGithub,
-} from "react-icons/fa";
+import ProfileLinks from "./ProfileLinks.jsx";
 
 const Hero = () => {
   const scrollOnClick = () => {
@@ -23,14 +16,13 @@ const Hero = () => {
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
+      once: false,
     });
   }, []);
-  // useEffect(() => {
-  //   document.body.style.overflow = "hidden";
-  // }, []);
+
   return (
     <>
-      <div className="relative text-white overflow-hidden">
+      <div className="relative text-white bg-[#011222] overflow-hidden">
         {/* topbar//command */}
         <button
           className="absolute text-4xl left-[48%] top-[5%] animate-pulse"
@@ -39,6 +31,7 @@ const Hero = () => {
           <FaCode />
         </button>
 
+        {/* video bg absolute */}
         <video
           src={bgVideo}
           autoPlay
@@ -57,32 +50,11 @@ const Hero = () => {
           <Btn />
         </div>
         {/* social media links */}
-        <div className=" flex justify-center items-center flex-col gap-5 text-3xl absolute top-[30%] right-[5%] sm:right-[2%]">
-          <p data-aos="fade-left" data-aos-duration="1000">
-            <FaGithub className="hover:text-[#669bbc] duration-300 hover:scale-[1.2] active:scale-[1.2] cursor-pointer" />
-          </p>
-          <p data-aos="fade-left" data-aos-duration="1200">
-            <FaLinkedin className="hover:text-[#669bbc] duration-300 hover:scale-[1.2] active:scale-[1.2] cursor-pointer" />
-          </p>
-          <p data-aos="fade-left" data-aos-duration="1400">
-            <FaFacebook className="hover:text-[#669bbc] duration-300 hover:scale-[1.2] active:scale-[1.2] cursor-pointer" />
-          </p>
-          <p data-aos="fade-left" data-aos-duration="1600">
-            <FaInstagram className="hover:text-[#669bbc] duration-300 hover:scale-[1.2] active:scale-[1.2] cursor-pointer" />
-          </p>
-          <p data-aos="fade-left" data-aos-duration="1800">
-            <FaWhatsappSquare className="hover:text-[#669bbc] duration-300 hover:scale-[1.2] active:scale-[1.2] cursor-pointer" />
-          </p>
-          <p data-aos="fade-left" data-aos-duration="2000">
-            <FaTelegram className="hover:text-[#669bbc] duration-300 hover:scale-[1.2] active:scale-[1.2] cursor-pointer" />
-          </p>
-        </div>
+        <ProfileLinks />
         {/* below details */}
 
         <button
           className="absolute bottom-[5%] rounded-lg left-[48%] "
-          onClick={scrollOnClick}
-          
         >
           <BsChevronDoubleDown className="text-white hover:text-[#669bbc] font-extrabold animate-bounce text-4xl" />
         </button>
