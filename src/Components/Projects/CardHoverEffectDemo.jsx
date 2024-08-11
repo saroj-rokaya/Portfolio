@@ -1,11 +1,12 @@
 import HoverEffect from "../Ui/HoverEffect.jsx";
+// import image from '../../assets/img/pngimg.png'
 
 export function CardHoverEffectDemo() {
     return (
         <>
             <div className="bg-[#669bbc] px-2">
-                <h2 className="text-4xl bg-[#011222] text-center py-5 container font-bold rounded-2xl mx-auto text-white">Card Hover Effect</h2>
-                <div className="w-full mx-auto bg-[#669bbc]">
+                <h2 className="text-4xl bg-[#011222] text-center py-5 container font-bold rounded-xl mx-auto text-white">Recent Projects</h2>
+                <div className="container w-full mx-auto bg-[#669bbc]">
                     <HoverEffect items={projects} />
                 </div>
             </div>
@@ -17,42 +18,22 @@ export const projects = [
         id: 1,
         title: "Portfolio",
         description:
-            "A technology company that builds economic infrastructure for the internet.",
-        // link: "https://stripe.com",
+            "My portfolio highlights a collection of projects developed using React.js and Tailwind CSS, demonstrating my expertise in front-end development. It showcases my ability to create modern, responsive web applications.",
+        link: "https://portfolioo-beta-five.vercel.app/",
     },
     {
         id: 2,
         title: "ER-Skills",
         description:
-            "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-        // link: "https://netflix.com",
+            "ER-Skills is a project showcasing projects developed with React.js. IT demonstrates my expertise in frontend development, featuring applicaitons that highlight skills in React.js and Tailwind CSs and responsive design",
+        link: "https://eb-site.vercel.app/",
     },
     {
         id: 3,
         title: "Dentamedi",
         description:
-            "A multinational technology company that specializes in Internet-related services and products.",
-        // link: "https://google.com",
+            "Dentamedi is a modern web application designed to streamline dental appointment scheduling and management. Built with React and Tailwind CSS, the platform provides a user-friendly interface for both patients and dental professionals..",
+        link: "https://dentamedi.vercel.app/",
     },
-    {
-        id: 4,
-        title: "Meta",
-        description:
-            "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-        // link: "https://meta.com",
-    },
-    {
-        id: 5,
-        title: "Amazon",
-        description:
-            "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-        // link: "https://amazon.com",
-    },
-    {
-        id: 6,
-        title: "Microsoft",
-        description:
-            "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-        // link: "https://microsoft.com",
-    },
+    
 ];
