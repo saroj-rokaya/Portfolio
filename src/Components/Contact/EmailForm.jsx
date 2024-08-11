@@ -2,17 +2,32 @@ import React, { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Successbar from "./Successbar.jsx";
+// import { useForm } from "react-hook-form"
+// import Successbar from "./Successbar.jsx";
 
 const EmailForm = () => {
+
+  // for the form validation from the react hook form
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   watch,
+  //   formState: { errors },
+  // } = useForm()
+  // const onSubmit = (data) => console.log(data)
+
+
+  // for the AOS (animation on scroll) initialization
   useEffect(() => {
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
-      once: false,
+      once: false,//animate when view
     });
   });
-  const form = useRef();
+
+  //to send the email after sumition by email js
+  const form = useRef();//to get the reference of the form for the submittion
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
@@ -29,12 +44,13 @@ const EmailForm = () => {
           window.alert("FAILED!....", error.text);
         }
       );
-    e.target.reset();
+    e.target.reset();//reset the form after submittion set to blank from
   };
   return (
     <>
       <form
         ref={form}
+        // onSubmit={handleSubmit(onSubmit)}
         onSubmit={sendEmail}
         data-aos="zoom-in-left"
         className="lg:w-2/5 px-5 rounded-lg md:w-1/2 bg-white flex flex-col md:ml-auto w-full py-10 mt-8 md:mt-0"

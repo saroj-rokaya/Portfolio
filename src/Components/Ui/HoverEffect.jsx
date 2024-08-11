@@ -1,6 +1,6 @@
-import { cn } from "../utils/cn.jsx";
+import { cn } from "../lib/utils.jsx";
 import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "react-router-dom"; // Correct import for Link
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const HoverEffect = ({ items, className }) => {
@@ -15,7 +15,7 @@ const HoverEffect = ({ items, className }) => {
     >
       {items.map((item, idx) => (
         <Link
-          to={item.link} // Use 'to' instead of 'href'
+          to={item.link}
           key={item.link}
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -47,14 +47,12 @@ const HoverEffect = ({ items, className }) => {
     </div>
   );
 };
-
 export default HoverEffect;
-
 export const Card = ({ className, children }) => {
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-xl h-full w-full p-4 overflow-hidden bg-[#011222] border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -67,7 +65,7 @@ export const Card = ({ className, children }) => {
 
 export const CardTitle = ({ className, children }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-white text-3xl font-bold tracking-wide mt-4", className)}>
       {children}
     </h4>
   );
@@ -77,7 +75,7 @@ export const CardDescription = ({ className, children }) => {
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-8 text-white tracking-wide leading-relaxed ",
         className
       )}
     >
