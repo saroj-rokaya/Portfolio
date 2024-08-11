@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import EmailForm from "./EmailForm.jsx";
-import Successbar from "./Successbar.jsx";
+// import Successbar from "./Successbar.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -16,7 +16,7 @@ const ContactSection = () => {
     <>
       <section className=" mx-auto body-font  relative bg-[#011222]">
         {/* <Successbar/> */}
-        <div className=" w-full container px-5 py-20 mx-auto md:gap-5 flex md:flex-nowrap flex-wrap">
+        <div className=" w-[90%] py-20 mx-auto md:gap-5 flex md:flex-nowrap flex-wrap">
           {/* map section */}
           <div
             className="lg:w-3/5 md:w-1/2 w-full h-[70vh] md:h-screen bg-gray-200  rounded-xl overflow-hidden p-10 flex items-end justify-start relative"

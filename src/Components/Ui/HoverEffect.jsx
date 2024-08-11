@@ -9,7 +9,7 @@ const HoverEffect = ({ items, className }) => {
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-5",
         className
       )}
     >
@@ -24,7 +24,7 @@ const HoverEffect = ({ items, className }) => {
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-2xl"
+                className="absolute inset-0 h-full w-full bg-[#669bbc] dark:bg-slate-800/[0.8] block rounded-2xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -52,7 +52,7 @@ export const Card = ({ className, children }) => {
   return (
     <div
       className={cn(
-        "rounded-xl h-full w-full p-4 overflow-hidden bg-[#011222] border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-xl h-full w-full p-4 bg-[#011222] backdrop-blur-2xl overflow-hidden dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -76,7 +76,7 @@ export const CardDescription = ({ className, children }) => {
   return (
     <p
       className={cn(
-        "mt-8 text-white text-justify  tracking-normal leading-relaxed ",
+        "mt-8 text-white text-justify tracking-normal leading-relaxed ",
         className
       )}
     >

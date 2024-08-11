@@ -55,7 +55,7 @@ const EmailForm = () => {
         data-aos="zoom-in-left"
         className="lg:w-2/5 px-5 rounded-lg md:w-1/2 bg-white flex flex-col md:ml-auto w-full py-10 mt-8 md:mt-0"
       >
-        <h2 className="text-lg mb-1 font-bold">Let's Connect</h2>
+        <h2 className="text-4xl tracking-normal mb-1 font-bold">Let's Connect</h2>
         <p className="leading-relaxed mb-5 ">
           Interested in working together? Feel free to drop me a message, I'm
           just a click away.

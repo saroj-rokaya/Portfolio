@@ -1,12 +1,28 @@
+import { useEffect } from "react";
 import HoverEffect from "../Ui/HoverEffect.jsx";
 // import image from '../../assets/img/pngimg.png'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export function CardHoverEffectDemo() {
+    useEffect(() => {
+        AOS.init(
+            {
+                duration: 1000,
+                easing: "ease-in-out",
+                once: false,
+            },
+            []
+        );
+    });
     return (
         <>
-            <div className="bg-[#669bbc] px-2">
-                <h2 className="text-4xl bg-[#011222] text-center py-5 container font-bold rounded-xl mx-auto text-white">Recent Projects</h2>
-                <div className="container w-full mx-auto bg-[#669bbc]">
+            <div>
+                <h2 className="text-4xl bg-[#011222] text-center py-5 w-[90%] font-bold rounded-xl mx-auto text-white">Recent Projects
+                </h2>
+                <div
+                    data-aos="zoom-in"
+                    className="w-[90%] mx-auto">
                     <HoverEffect items={projects} />
                 </div>
             </div>
@@ -35,5 +51,5 @@ export const projects = [
             "Dentamedi is a modern web application designed to streamline dental appointment scheduling and management. Built with React and Tailwind CSS, the platform provides a user-friendly interface for both patients and dental professionals..",
         link: "https://dentamedi.vercel.app/",
     },
-    
+
 ];
