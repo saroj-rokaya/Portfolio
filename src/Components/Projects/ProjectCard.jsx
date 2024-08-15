@@ -29,7 +29,7 @@ const ProjectCard = ({ title, description, link, animationDuration }) => {
                         {description}
                     </p>
                     <Link
-                        to={link}
+                        to={link}f
                         className="mt-3 text-green-500 font-bold animate-pulse inline-flex items-center">View More
                         <RiArrowRightLine />
                     </Link>

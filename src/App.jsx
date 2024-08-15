@@ -5,7 +5,7 @@ import ContactSection from './Components/Contact/ContactSection.jsx'
 import { CardHoverEffectDemo } from './Components/Projects/CardHoverEffectDemo.jsx'
 import { BackgroundBeamsDemo } from './Components/Projects/BackgroundBeamDemo.jsx'
 import Projects from './Components/Projects/Projects.jsx'
-import { ExpandableCardDemo } from './Components/Hero/ExpandableCardDemo.jsx'
+import Footer from './Components/Footer/Footer.jsx'
 const App = () => {
   return (
     <>
@@ -14,8 +14,8 @@ const App = () => {
       {/* <CardHoverEffectDemo/> */}
       {/* <BackgroundBeamsDemo/> */}
       <Projects/>
-      <ExpandableCardDemo/>
       <ContactSection/>
+      <Footer/>
     </>
   )
 }

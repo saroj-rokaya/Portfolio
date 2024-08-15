@@ -33,6 +33,11 @@ const Projects = () => {
                     </div>
                 </div>
             </section>
+            <section>
+                <div>
+                    popup model
+                </div>
+            </section>
         </>
     )
 }
