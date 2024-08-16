@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProjectCard from './ProjectCard.jsx';
+import PopupProjectModel from './PopupProjectModel.jsx';
+
 
 
 const Projects = () => {
+    const [showModel, isShowModel] = useState(false);
     return (
         <>
             <section className="text-white py-10 bg-[#669bbc] body-font w-full">
@@ -12,32 +15,32 @@ const Projects = () => {
                             Recent Projects
                         </h1>
                     </div>
-                    <div className=" gap-10 md:flex w-[90%] mx-auto">
-
+                    <div className=" gap-10 md:flex w-[90%] mx-auto"
+                        onClick={() => isShowModel(true)}
+                    >
                         <ProjectCard
                             title="Portfolio"
                             description="My portfolio highlights a collection of projects developed using React.js and Tailwind CSS, demonstrating my expertise in front-end development. It showcases my ability to create modern, responsive web applications."
-                            link="https://portfolioo-beta-five.vercel.app/" 
-                            animationDuration="1000"/>
+                            link="https://portfolioo-beta-five.vercel.app/"
+                            animationDuration="1000"
+                        />
                         <ProjectCard
                             title="ER-Skills"
                             description="ER-Skills is a project showcasing projects developed with React.js. IT demonstrates my expertise in frontend development, featuring applicaitons that highlight skills in React.js and Tailwind CSs and responsive design."
-                            link="https://eb-site.vercel.app/" 
-                            animationDuration="1300"/>
+                            link="https://eb-site.vercel.app/"
+                            animationDuration="1300" />
                         <ProjectCard
                             title="Dentamedi"
                             description="Dentamedi is a modern web application designed to streamline dental appointment scheduling and management. Built with React and Tailwind CSS, the platform provides a user-friendly interface for both patients and dental professionals.."
-                            link="https://dentamedi.vercel.app/" 
-                            animationDuration="1600"/>
+                            link="https://dentamedi.vercel.app/"
+                            animationDuration="1600" />
 
                     </div>
                 </div>
+                {showModel && <PopupProjectModel onClose={()=>isShowModel(false)} />}
             </section>
-            <section>
-                <div>
-                    popup model
-                </div>
-            </section>
+
+
         </>
     )
 }
