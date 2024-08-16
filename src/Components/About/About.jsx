@@ -6,6 +6,8 @@ import { FaReact, FaNodeJs } from "react-icons/fa";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 
 const About = () => {
+
+  //AOS animation initializatioin
   useEffect(() => {
     AOS.init(
       {
@@ -20,10 +22,12 @@ const About = () => {
     <>
       <section className="overflow-hidden py-5 bg-[#669bbc]">
         <div className="w-[90%] bg-[#011222] rounded-xl text-white p-5 sm:p-10 mx-auto flex flex-wrap">
+
+          {/* left section about  */}
           <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
             <h1 className="text-3xl font-medium mb-4" data-aos="fade-right">
               ABOUT ME
-            </h1>
+            </h1> 
             <p
               className="leading-relaxed mb-4 text-justify"
               data-aos="fade-right"
@@ -44,6 +48,8 @@ const About = () => {
               <li className="border-2 p-1 rounded-lg " data-aos="fade-right" data-aos-delay="1000">CSS3</li>
               <li className="border-2 p-1 rounded-lg " data-aos="fade-right" data-aos-delay="1100">Bootstrap</li>
             </ul>
+
+            {/* web developemnt section  */}
             <h1
               className="text-3xl font-medium mb-4"
               data-aos="fade-right"
@@ -51,47 +57,60 @@ const About = () => {
             >
               Web Development
             </h1>
+            {/* //web development icons left side  */}
             <div className="flex w-full py-5 gap-10 text-4xl">
               {/* /* From Uiverse.io by Ashe-T */}
+
+              {/* React icon Button  */}
               <button
                 href="/"
                 className="group flex justify-center text-white font-semibold hover:translate-y-3 transition-all duration-500 "
                 data-aos="fade-right"
                 data-aos-duration="1500"
               >
+                {/* React icon */}
                 <FaReact className="text-cyan-500" />
                 <span className="absolute opacity-0 group-hover:opacity-100 group-hover:text-white group-hover:text-sm group-hover:-translate-y-10 duration-700">
                   React
                 </span>
               </button>
+
+              {/* //tailwind icon button  */}
               <button
                 href="/"
                 className="group flex justify-center text-white font-semibold hover:translate-y-3 transition-all duration-500 "
                 data-aos="fade-right"
                 data-aos-duration="1700"
               >
+                {/* //tailwind icon  */}
                 <RiTailwindCssFill className="text-cyan-500" />
                 <span className="absolute opacity-0 group-hover:opacity-100 group-hover:text-white group-hover:text-sm group-hover:-translate-y-10 duration-700">
                   Tailwind
                 </span>
               </button>
+
+              {/* //node js icon button  */}
               <button
                 href="/"
                 className="group flex justify-center text-white font-semibold hover:translate-y-3 transition-all duration-500 "
                 data-aos="fade-right"
                 data-aos-duration="1900"
               >
+                {/* //node js icon  */}
                 <FaNodeJs className="text-green-500" />
                 <span className="absolute opacity-0 group-hover:opacity-100 group-hover:text-white group-hover:text-sm group-hover:-translate-y-10 duration-700">
                   Node JS
                 </span>
               </button>
+
+              {/* Next js icon button  */}
               <button
                 href="/"
                 className="group flex justify-center text-white font-semibold hover:translate-y-3 transition-all duration-500 "
                 data-aos="fade-right"
                 data-aos-duration="2100"
               >
+                {/* //next js icon  */}
                 <RiNextjsLine />
                 <span className="absolute opacity-0 group-hover:opacity-100 group-hover:text-white group-hover:text-sm group-hover:-translate-y-10 duration-700">
                   Next JS
@@ -99,6 +118,8 @@ const About = () => {
               </button>
             </div>
           </div>
+
+          {/* right section image  */}
           <img
             alt="img"
             data-aos="zoom-in"

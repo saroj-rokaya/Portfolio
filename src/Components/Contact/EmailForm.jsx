@@ -7,16 +7,6 @@ import "aos/dist/aos.css";
 
 const EmailForm = () => {
 
-  // for the form validation from the react hook form
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   watch,
-  //   formState: { errors },
-  // } = useForm()
-  // const onSubmit = (data) => console.log(data)
-
-
   // for the AOS (animation on scroll) initialization
   useEffect(() => {
     AOS.init({
@@ -36,11 +26,9 @@ const EmailForm = () => {
       })
       .then(
         () => {
-          //   console.log("SUCCESS!");
           window.confirm("Message Sent!");
         },
         (error) => {
-          //   console.log("FAILED...", error.text);
           window.alert("FAILED!....", error.text);
         }
       );
@@ -49,9 +37,8 @@ const EmailForm = () => {
   return (
     <>
       <form
-        ref={form}
-        // onSubmit={handleSubmit(onSubmit)}
-        onSubmit={sendEmail}
+        ref={form}//take a reference of this form
+        onSubmit={sendEmail}//when submit the message auto send in your email by Emailjs library
         data-aos="zoom-in-left"
         className="lg:w-2/5 px-5 rounded-lg md:w-1/2 bg-white flex flex-col md:ml-auto w-full py-10 mt-8 md:mt-0"
       >
@@ -60,6 +47,7 @@ const EmailForm = () => {
           Interested in working together? Feel free to drop me a message, I'm
           just a click away.
         </p>
+        {/* full name input section  */}
         <div className="relative mb-4">
           <label htmlFor="name" className="leading-7 text-sm font-semibold">
             Name <span className="text-red-500">*</span>
@@ -70,6 +58,8 @@ const EmailForm = () => {
             className="w-full bg-white rounded border border-[#669bbc]  focus:ring-2 focus:ring-[#011222] text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
         </div>
+
+        {/* email input section  */}
         <div className="relative mb-4">
           <label htmlFor="email" className="leading-7 text-sm font-semibold">
             Email <span className="text-red-500">*</span>
@@ -80,6 +70,8 @@ const EmailForm = () => {
             className="w-full bg-white rounded border border-[#669bbc]  focus:ring-2 focus:ring-[#011222] text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
         </div>
+
+        {/* //message section  */}
         <div className="relative mb-4">
           <label htmlFor="message" className="leading-7 text-sm font-semibold">
             Message <span className="text-red-500">*</span>
@@ -89,10 +81,11 @@ const EmailForm = () => {
             className="w-full bg-white rounded border border-[#669bbc] focus:ring-2 focus:ring-[#011222] h-32 text-base outline-none py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
           ></textarea>
         </div>
+
+        {/* //button section  */}
         <button
           type="submit"
           value="Send"
-          //   onClick={}
           className="border-0 py-2 inline-flex h-12 animate-shimmer items-center justify-center rounded-md  bg-[linear-gradient(110deg,#011222,45%,#669bbc,55%,#011222)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors hover:bg-[linear-gradient(110deg,#669bbc,45%,#011222,55%,#669bbc)]"
         >
           Send Message

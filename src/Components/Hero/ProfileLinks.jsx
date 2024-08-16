@@ -6,28 +6,32 @@ import {
   FaWhatsappSquare,
   FaTelegram,
   FaGithub,
-} from "react-icons/fa";
+} from "react-icons/fa";//icon from react-icons
+
+//social media link style initialization
+const linkStyle = "hover:text-[#669bbc] duration-300 hover:scale-[1.2] active:scale-[1.2] cursor-pointer"
+
 const ProfileLinks = () => {
   return (
     <>
       <div className="flex justify-center items-center flex-col gap-5 text-3xl absolute top-[30%] right-[5%] sm:right-[2%]">
         <p data-aos="fade-left" data-aos-duration="1000">
-          <FaGithub className="hover:text-[#669bbc] duration-300 hover:scale-[1.2] active:scale-[1.2] cursor-pointer" />
+          <FaGithub className={linkStyle} />
         </p>
         <p data-aos="fade-left" data-aos-duration="1200">
-          <FaLinkedin className="hover:text-[#669bbc] duration-300 hover:scale-[1.2] active:scale-[1.2] cursor-pointer" />
+          <FaLinkedin className={linkStyle} />
         </p>
         <p data-aos="fade-left" data-aos-duration="1400">
-          <FaFacebook className="hover:text-[#669bbc] duration-300 hover:scale-[1.2] active:scale-[1.2] cursor-pointer" />
+          <FaFacebook className={linkStyle} />
         </p>
         <p data-aos="fade-left" data-aos-duration="1600">
-          <FaInstagram className="hover:text-[#669bbc] duration-300 hover:scale-[1.2] active:scale-[1.2] cursor-pointer" />
+          <FaInstagram className={linkStyle} />
         </p>
         <p data-aos="fade-left" data-aos-duration="1800">
-          <FaWhatsappSquare className="hover:text-[#669bbc] duration-300 hover:scale-[1.2] active:scale-[1.2] cursor-pointer" />
+          <FaWhatsappSquare className={linkStyle} />
         </p>
         <p data-aos="fade-left" data-aos-duration="2000">
-          <FaTelegram className="hover:text-[#669bbc] duration-300 hover:scale-[1.2] active:scale-[1.2] cursor-pointer" />
+          <FaTelegram className={linkStyle} />
         </p>
       </div>
     </>

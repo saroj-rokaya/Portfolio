@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export function CardHoverEffectDemo() {
+    // initialize AOS on component mount
     useEffect(() => {
         AOS.init(
             {
@@ -23,12 +24,14 @@ export function CardHoverEffectDemo() {
                 <div
                     data-aos="zoom-in"
                     className="w-[90%] mx-auto">
+                    {/* //project send to the HoverEffect ui components as a props */}
                     <HoverEffect items={projects} />
                 </div>
             </div>
         </>
     );
 }
+// project details object 
 export const projects = [
     {
         id: 1,

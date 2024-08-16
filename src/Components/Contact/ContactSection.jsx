@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const ContactSection = () => {
+  //aos animation initialization
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -17,22 +18,22 @@ const ContactSection = () => {
       <section className=" mx-auto body-font  relative bg-[#011222]">
         {/* <Successbar/> */}
         <div className=" w-[90%] py-20 mx-auto md:gap-5 flex md:flex-nowrap flex-wrap">
-          {/* map section */}
+          {/* map section left side */}
           <div
             className="lg:w-3/5 md:w-1/2 w-full h-[70vh] md:h-screen bg-gray-200  rounded-xl overflow-hidden p-10 flex items-end justify-start relative"
             data-aos="zoom-in-right"
           >
+            {/* //embedded map from the google map  */}
             <iframe
               width="100%"
               height="100%"
               className={`absolute inset-0`}
-              frameBorder="0"
               title="map"
-              marginHeight="0"
-              marginWidth="0"
               loading="lazy"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.606744394647!2d85.37418097456681!3d27.707041525506625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a4ab434c529%3A0x2e164853495d40cd!2sGothatar%20English%20Secondary%20School!5e1!3m2!1sen!2snp!4v1723170122015!5m2!1sen!2snp"
             />
+
+            {/* contact details section in map */}
             <div className="bg-[#011222]/50  backdrop-blur-sm mx-auto text-white relative flex flex-wrap py-6 rounded-lg shadow-md"
               data-aos="zoom-in"
               data-aos-duration="2000"
@@ -53,7 +54,8 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-          {/* form section */}
+
+          {/* form section right side */}
           <EmailForm />
         </div>
       </section>
